@@ -208,8 +208,7 @@ def user_stats(df, city):
 
 def display_data(df):
     # Ask user if they want to see individual trip data.
-    start_index = 0
-    end_index = 5
+    start_index, end_index = 0, 5
     data_length = len(df.index)
 
     user_continue = input("\nWould you like to see the first 5 rows of data?\nEnter 'yes' or 'no': ").lower()
