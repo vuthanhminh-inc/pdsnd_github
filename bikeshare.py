@@ -214,6 +214,7 @@ def display_data(df):
 
     user_continue = input("\nWould you like to see the first 5 rows of data?\nEnter 'yes' or 'no': ").lower()
     
+    # Loop while user want to continue.
     while user_continue == 'yes':
         if end_index > data_length:
             end_index = data_length
