@@ -4,9 +4,11 @@ import calendar
 import pandas as pd
 import numpy as np
 
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+
 
 def get_filters():
     """
@@ -34,7 +36,6 @@ def get_filters():
             print('Please enter number!.')
             continue
 
-
     # get user input for month (all, january, february, ... , june)
     while True:
         month = input("Please enter month (from January to June) in number to be analyzed, type (0) to filter all months: ")
@@ -55,7 +56,6 @@ def get_filters():
             print('Please enter number!.')
             continue
 
-
     # get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         day = input("Please enter day (from Monday(2) to Sunday(8)) in number to be analyzed, type (0) to filter all days: ")
@@ -75,7 +75,6 @@ def get_filters():
         except:
             print('Please enter number!.')
             continue
-
 
     print('-'*40)
     return city, month, day
@@ -208,8 +207,7 @@ def user_stats(df, city):
 
 def display_data(df):
     # Ask user if they want to see individual trip data.
-    start_index = 0
-    end_index = 5
+    start_index, end_index = 0, 5
     data_length = len(df.index)
 
     user_continue = input("\nWould you like to see the first 5 rows of data?\nEnter 'yes' or 'no': ").lower()
