@@ -245,6 +245,8 @@ def main():
         if restart.lower() != 'yes':
             break
 
+        print('Thanks for using me!')
+
 
 if __name__ == "__main__":
 	main()
