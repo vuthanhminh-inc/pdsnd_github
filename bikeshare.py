@@ -4,9 +4,11 @@ import calendar
 import pandas as pd
 import numpy as np
 
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+
 
 def get_filters():
     """
@@ -34,7 +36,6 @@ def get_filters():
             print('Please enter number!.')
             continue
 
-
     # get user input for month (all, january, february, ... , june)
     while True:
         month = input("Please enter month (from January to June) in number to be analyzed, type (0) to filter all months: ")
@@ -55,7 +56,6 @@ def get_filters():
             print('Please enter number!.')
             continue
 
-
     # get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         day = input("Please enter day (from Monday(2) to Sunday(8)) in number to be analyzed, type (0) to filter all days: ")
@@ -75,7 +75,6 @@ def get_filters():
         except:
             print('Please enter number!.')
             continue
-
 
     print('-'*40)
     return city, month, day
